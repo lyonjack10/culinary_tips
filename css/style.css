@@ -1,0 +1,189 @@
+
+img{
+  display: block; 
+  max-height: 150px;
+  max-width: 400px;
+  margin-left: 0px;
+  margin-right: auto;
+}
+
+ .nav_item a:hover, a:focus{
+  color: #50C7C7;
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+
+.nav_item a{
+    padding: 10px;
+  }
+
+  a.skip{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+
+  a.skip:focus{
+    top:20px;
+    color: black;
+    text-decoration-style: solid;
+  }
+
+  *:focus{
+    border: 2px solid black;
+  }
+
+body{
+  background-image: url('../images/wood_backgroud.jpg');
+  font-family: 'Lucida Grande', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 16pt;
+}
+
+a.skip{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+a.skip:focus{
+  top:20px;
+  color: black;
+  text-decoration-style: solid;
+}
+
+*:focus{
+  border: 2px solid black;
+}
+
+footer{
+  /* position: fixed; */
+  /* bottom: 0em; */
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  /* padding-bottom: 10px; */
+  text-align: center;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid black;
+  background-color: white;
+
+}
+
+.nav_links{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.nav_item a{
+  color: black;
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #knife {
+    animation: none;
+  }
+}
+
+@media screen and (min-width: 850px){
+
+
+
+  header{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: left;
+  }
+
+  .nav_links{
+  flex-direction: row;
+  justify-content: space-around;
+  }
+
+  .nav_item a{
+    padding: 10px;
+  }
+}
+
+#intro{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 400px;
+  flex-shrink: 0;
+  margin: 20px;
+  background:rgb(228, 220, 220);
+  border-radius: 5px;
+  padding: 0 0 50px 0;
+}
+
+@-webkit-keyframes knife_spin{
+
+from {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(359deg);
+}
+}
+
+
+@keyframes knife_spin{
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+#knife{
+  -webkit-animation-name: kinfe_spin ;
+  animation-name: knife_spin;
+
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+#chili{
+  min-width: 400px;
+  min-height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding:1px;
+  border:1px solid #021a40;
+  background-color:grey;
+}
+/* #weather{
+  display: block;
+  margin-left: auto;
+  margin-right: 0px;
+} */
