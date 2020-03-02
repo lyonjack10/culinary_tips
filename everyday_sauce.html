@@ -14,21 +14,33 @@
       <nav>
         <ul class="nav_links">
             <li class="nav_item"><a href="index.html"> Home </a></li>
-          <li class="nav_item"><a href="everyday_sauce.html"> Everyday Sauce </a></li>
+          <li class="nav_item" id = active><a href="everyday_sauce.html"> Everyday Sauce </a></li>
           <li class="nav_item"><a href="beef_strog.html"> Beef Stroganoff</a> </a></li>
           <li class="nav_item"><a href="chili_recipe.html"> Chili </a></li>
+          <li class="nav_item"><a href="contact.html"> Contact </a></li>
         </ul>
     </nav>
     </header>
     <main class="about" id="skip">
     <br>
-    <div> 
+    <div id = 'function_flip'> 
       <h1>Every Day Sauce</h1>
       <br>
-      <img src="images/red_sauce.jpg" alt="Red tomatoe sauce" />
-      <br>
+      <div class="flip-card" tabindex="0">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/red_sauce.jpg" alt="Red tomatoe sauce" id = red_sauce />
+          </div>
+          <div class="flip-card-back">
+              <h1> Everday Sauce</h1>
+              <p>You can put this on anything</p><br>
+              <p>This was the first thing that my Grandpa tought me how to cook</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div id = "Ingrediants">
+    <br>
+    <div id = "ingrediants">
         <br>
         <h2> Ingrediants</h2>
         <br>
@@ -41,7 +53,8 @@
             <li>Pepper</li>
         </ul>
         <br>
-        <div>
+    </div>
+        <div id = 'directions'>
         <h2>Preparation</h2>
         <bR>
         <ol>

@@ -8,7 +8,7 @@ img{
 }
 
  .nav_item a:hover, a:focus{
-  color: #50C7C7;
+  color: rgb(23, 48, 48);
   text-decoration: underline;
   -webkit-text-decoration-style: dotted;
           text-decoration-style: dotted;
@@ -101,6 +101,12 @@ header{
   text-decoration: none;
 }
 
+#active{
+  color:white;
+  background-color: grey;
+  border-radius: 5em;
+}
+
 @media (prefers-reduced-motion: reduce) {
   #knife {
     animation: none;
@@ -136,6 +142,9 @@ header{
   background:rgb(228, 220, 220);
   border-radius: 5px;
   padding: 0 0 50px 0;
+  border-radius: 1em;
+  text-align: center;
+  border: 1px solid black;
 }
 
 @-webkit-keyframes knife_spin{
@@ -187,3 +196,90 @@ to {
   margin-left: auto;
   margin-right: 0px;
 } */
+
+#ingrediants{
+  display: flex;
+  flex-direction: column;
+  /* flex-basis: 200px; */
+  flex-shrink: 0;
+  margin: 100px;
+  background:rgb(228, 220, 220);
+  border-radius: 5px;
+  padding: 50px 50px 50px 50px;
+  border-radius: 1em;
+  text-align: left;
+  border: 1px solid black;
+}
+
+#directions{
+  display: grid;
+  grid-template-columns: 1fr;
+  /* flex-basis: 400px;
+  flex-shrink: 0; */
+  margin: 20px;
+  background:rgb(228, 220, 220);
+  border-radius: 5px;
+  padding: 50px 50px 50px 50px;
+  border-radius: 1em;
+  /* justify-content: flex-start; */
+  text-align: left;
+  border: 1px solid black;
+}
+
+#red_sauce{
+  display: block; 
+  max-height: 400px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ .flip-card {
+   margin-right: auto;
+   margin-left: auto;
+  background-color: transparent;
+  width: 200px;
+  height: 300px;
+  /* perspective: 1000px; Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: static;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+ .flip-card:focus .flip-card-inner{
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+ }
+
+/* Style the front side (fallback if image is missing) */
+ /* .flip-card-front {
+  background-color: #bbb;
+  color: black;
+} */
+
+/* Style the back side */
+ .flip-card-back {
+  background-color: transparent;
+  color:black;
+  transform: rotateY(180deg);
+} 
