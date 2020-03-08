@@ -3,8 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel ='stylesheet' type ="text/css" href = 'css/style.css'>
+    <link rel="shortcut icon" type="image/png" href="images/knife_animation.png"/>
     <title> Cooking with Jack </title>
   </head>
   <body>
@@ -15,20 +19,40 @@
         <ul class="nav_links">
             <li class="nav_item"><a href="index.html"> Home </a></li>
           <li class="nav_item"><a href="everyday_sauce.html"> Everyday Sauce </a></li>
-          <li class="nav_item" ><a href="beef_strog.html"> Beef Stroganoff</a> </a></li>
+          <li class="nav_item" ><a href="beef_strog.html"> Beef Stroganoff</a> </li>
           <li class="nav_item"><a href="chili_recipe.html"> Chili </a></li>
           <li class="nav_item" id =active><a href="contact.html"> Contact </a></li>
         </ul>
     </nav>
     </header>
     <main class="about" id="skip">
+        <h1>Contact</h1>
+        <form action="https://formspree.io/mwkbznnk" method="POST">
+         <fieldset>
+            <legend>Let me know your Favorite Recipe</legend>
+            <div class = "contact">
+               <label for ="first">First Name:</label>
+               <input type="text" id ="first" name="fname" placeholder ="Your Name"/>
+         
+               <label for ="last">Last Name:</label>
+               <input type="text" id ="last" name="lname" placeholder ="Your Last Name"/>
+
+               <label for ="email">Email:</label>
+               <input type="email" id="email" name ="email" placeholder="Your Email"/>
+         
+               <label for ="recipe">Recipe or Comments:</label><textarea id = "recipe" required></textarea>
 
 
-    </div>
+            </div>
+            
+            <div><input type="submit" value ='Submit'/></div>
+        </fieldset>
+        </form>
+
 
     <div>
     </div>
-  </div>
+
     <footer>
       <p>Jack's Culinary Tips</p>
       <p> Email me: <a href="mailto:lyonjack@umich.edu"> lyonjack@umich.edu</a>.

@@ -1,4 +1,3 @@
-
 img{
   display: block; 
   max-height: 150px;
@@ -7,7 +6,7 @@ img{
   margin-right: auto;
 }
 
- .nav_item a:hover, a:focus{
+.nav_item a:hover, a:focus{
   color: rgb(23, 48, 48);
   text-decoration: underline;
   -webkit-text-decoration-style: dotted;
@@ -46,6 +45,11 @@ body{
   padding: 0;
   font-size: 16pt;
 }
+h1{
+  text-shadow: 3px 3px 0px #B0E0E6;
+  font-size: 24pt;
+  text-align: center;
+}
 
 a.skip{
   background: white;
@@ -69,12 +73,9 @@ a.skip:focus{
 }
 
 footer{
-  /* position: fixed; */
-  /* bottom: 0em; */
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  /* padding-bottom: 10px; */
   text-align: center;
 }
 
@@ -103,34 +104,8 @@ header{
 
 #active{
   color:white;
-  background-color: grey;
+  background-color:#B0E0E6;
   border-radius: 5em;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  #knife {
-    animation: none;
-  }
-}
-
-@media screen and (min-width: 850px){
-
-
-
-  header{
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: left;
-  }
-
-  .nav_links{
-  flex-direction: row;
-  justify-content: space-around;
-  }
-
-  .nav_item a{
-    padding: 10px;
-  }
 }
 
 #intro{
@@ -182,28 +157,34 @@ to {
 
 }
 
-#chili{
-  min-width: 400px;
-  min-height: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  padding:1px;
-  border:1px solid #021a40;
-  background-color:grey;
+.parralax{
+  background: url(../images/chili.jpg);
+  background-attachment: fixed; /* Parallax effect */
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  height: 1000px;
 }
+
 /* #weather{
   display: block;
   margin-left: auto;
   margin-right: 0px;
 } */
 
+.container{
+  display:grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-row-gap: 20px;
+}
+
 #ingrediants{
-  display: flex;
-  flex-direction: column;
-  /* flex-basis: 200px; */
-  flex-shrink: 0;
-  margin: 100px;
-  background:rgb(228, 220, 220);
+  grid-column: 2/ span 3;
+  grid-row: 2/ span 1;
+  margin: auto;
+  background:#e1e1e1;
+  /* background:rgb(228, 220, 220); */
   border-radius: 5px;
   padding: 50px 50px 50px 50px;
   border-radius: 1em;
@@ -213,37 +194,35 @@ to {
 
 #directions{
   display: grid;
-  grid-template-columns: 1fr;
-  /* flex-basis: 400px;
-  flex-shrink: 0; */
-  margin: 20px;
-  background:rgb(228, 220, 220);
+  grid-column: 2/ span 3;
+  grid-row: 3/span 1;
+  margin: auto;
+  background:#e1e1e1;
+  /* background:rgb(228, 220, 220); */
   border-radius: 5px;
   padding: 50px 50px 50px 50px;
   border-radius: 1em;
-  /* justify-content: flex-start; */
   text-align: left;
   border: 1px solid black;
 }
 
 #red_sauce{
-  display: block; 
-  max-height: 400px;
-  max-width: 300px;
-  margin-left: auto;
-  margin-right: auto;
+  min-width: 400px;
+  min-height: 400px;
+  margin-left: -55%;
+  padding:1px;
+  border:1px solid #021a40;
+  background-color:grey;
 }
 
- .flip-card {
-   margin-right: auto;
-   margin-left: auto;
+.flip-card {
+  margin-right: auto;
+  margin-left: auto;
   background-color: transparent;
   width: 200px;
   height: 300px;
-  /* perspective: 1000px; Remove this if you don't want the 3D effect */
 }
 
-/* This container is needed to position the front and back side */
 .flip-card-inner {
   position: static;
   width: 100%;
@@ -253,7 +232,6 @@ to {
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
@@ -262,24 +240,175 @@ to {
   transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
 .flip-card-front, .flip-card-back {
   position: absolute;
   max-width: 100%;
   max-height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
- }
+}
 
-/* Style the front side (fallback if image is missing) */
- /* .flip-card-front {
-  background-color: #bbb;
-  color: black;
-} */
-
-/* Style the back side */
- .flip-card-back {
+.flip-card-back {
   background-color: transparent;
   color:black;
   transform: rotateY(180deg);
-} 
+}
+
+.gallery{
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+.gallery > img{
+  border: 5px black solid;
+  margin: 15px;
+  width: auto;
+}
+
+.gallery > img:nth-child(odd){
+  border: 5px  #4682B4 solid;
+}
+
+@-webkit-keyframes gallery{
+
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+  }
+
+  @keyframes gallery{
+    from {
+      opacity: 0.3;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+.gallery > img:nth-child(even){
+    -webkit-animation-name: gallery ;
+    animation-name: gallery;
+
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #knife {
+      animation: none;
+    }
+    .gallery > img:nth-child(even){
+      animation: none;
+    }
+  }
+
+#strog{
+  min-width: 400px;
+  min-height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding:1px;
+  border:1px solid #021a40;
+  background-color:grey;
+}
+
+fieldset div{
+  border: 2px solid black;
+  margin: 5%;
+  padding: 1%;
+  border-radius: 5px;
+}
+
+fieldset{
+  border-radius: 10px;
+}
+
+#recipe{
+  margin-top: 0em;
+  margin-left: 0em;
+  height: 400px;
+  padding: 5px;
+}
+
+.contact{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-row-gap: 5px;
+}
+
+input[type = submit]{
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+@media screen and (min-width: 850px){
+
+
+  header{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: left;
+  }
+
+  .nav_links{
+    flex-direction: column;
+    justify-content: space-between;
+    }
+
+  .nav_item a{
+    padding: 10px;
+  }
+
+  #ingrediants{
+    grid-column: 1/ span 2;
+  }
+}
+
+
+@media screen and (min-width: 1000px){
+
+  header{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: left;
+  }
+
+    .nav_links{
+      flex-direction: row;
+      justify-content: space-around;
+      }
+
+  #ingrediants{
+    grid-row: 2/ span 3;
+    grid-column: 1/ span 1;
+    background-color: white;
+    border: none;
+  }
+
+  #directions{
+    grid-row: 2/ span 1;
+    grid-column: 2/span 2 ;
+    background-color:white;
+    border: none;
+  }
+}
