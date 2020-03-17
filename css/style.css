@@ -37,7 +37,7 @@ img{
   *:focus{
     border: 2px solid black;
   }
-/* Lucida Grande */
+
 body{
   background-image: url('../images/wood_backgroud.jpg');
   font-family: 'Lucida Grande', sans-serif;
@@ -143,7 +143,7 @@ to {
 }
 
 #knife{
-  -webkit-animation-name: kinfe_spin ;
+  -webkit-animation-name: kinfe_spin;
   animation-name: knife_spin;
 
   -webkit-animation-duration: 3s;
@@ -170,7 +170,6 @@ to {
   display:grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto auto;
-  /* grid-row-gap: 20px; */
   grid-gap: 1em;
 }
 
@@ -179,7 +178,6 @@ to {
   grid-row: 2/ span 1;
   margin: auto;
   background:#e1e1e1;
-  /* background:rgb(228, 220, 220); */
   border-radius: 5px;
   padding: 50px 50px 50px 50px;
   border-radius: 1em;
@@ -193,7 +191,6 @@ to {
   grid-row: 3/span 1;
   margin: auto;
   background:#e1e1e1;
-  /* background:rgb(228, 220, 220); */
   border-radius: 5px;
   padding: 50px 50px 50px 50px;
   border-radius: 1em;
@@ -328,18 +325,6 @@ to {
   border:1px solid #021a40;
   background-color:grey;
 }
-/* 
-fieldset div{
-  border: 2px solid black;
-  margin: 5%;
-  padding: 1%;
-  border-radius: 5px;
-} */
-
-/* fieldset{
-  border-radius: 10px;
-} */
-
 
 .contact{
   display: grid;
@@ -347,23 +332,12 @@ fieldset div{
   grid-row-gap: 5px;
 }
 
-/* input[type = submit]{
-  border: 1px solid black;
-  margin-left: auto;
-  margin-right: auto;
-  width: 150px;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-} */
-
 fieldset div{
   margin:10px auto;
 	max-width: 1200px;
 	padding: 20px 12px 10px 20px;
 	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
-
 
 #recipe{
   margin-top: 0em;
@@ -493,4 +467,19 @@ li{
   input{
     color: black;
   }
+  }
+
+  @media screen and (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto; /* Removes scroll animation */
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #knife {
+      animation: none;
+    }
+    .gallery > img:nth-child(even){
+      animation: none;
+    }
+
   }
