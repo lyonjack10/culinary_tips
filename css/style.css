@@ -469,6 +469,41 @@ li{
   }
   }
 
+  @-webkit-keyframes fork_spin{
+
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+    }
+    
+    
+    @keyframes fork_spin{
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    
+    #fork{
+      -webkit-animation-name: fork_spin;
+      animation-name: fork_spin;
+    
+      -webkit-animation-duration: 3s;
+      animation-duration: 3s;
+    
+      -webkit-animation-iteration-count: 5;
+      animation-iteration-count: 5;
+    
+      margin-right: auto;
+      margin-left: auto;
+    
+    }
+
   @media screen and (prefers-reduced-motion: reduce){
     html{
         scroll-behavior: auto; /* Removes scroll animation */
@@ -480,6 +515,10 @@ li{
     }
     .gallery > img:nth-child(even){
       animation: none;
+    }
+
+    #fork{
+      animation:none;
     }
 
   }
